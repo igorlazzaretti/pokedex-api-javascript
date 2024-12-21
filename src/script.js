@@ -35,7 +35,7 @@ const renderPokemon = async (pokemon) => {
         pokemonNumber.innerHTML = data.id;
         let pokemonGif = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
         if (pokemonGif === null) {
-            pokemonImage.src = '../src/images/interrogacao.gif';
+            pokemonImage.src = './src/images/interrogacao.gif';
         } else {
             pokemonImage.src = pokemonGif;
         }
@@ -43,7 +43,7 @@ const renderPokemon = async (pokemon) => {
         searchPokemon = data.id;
     } else {
         pokemonImage.style.display = 'block';
-        pokemonImage.src = '../src/images/interrogacao.gif';
+        pokemonImage.src = './src/images/interrogacao.gif';
         pokemonName.innerHTML = 'Not found :☹️';
         pokemonNumber.innerHTML = '';
     }
